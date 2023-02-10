@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Git升级版本（windows）</title>
+    <link href="/2023/02/11/Git%E5%8D%87%E7%BA%A7%E7%89%88%E6%9C%AC%EF%BC%88windows%EF%BC%89/"/>
+    <url>/2023/02/11/Git%E5%8D%87%E7%BA%A7%E7%89%88%E6%9C%AC%EF%BC%88windows%EF%BC%89/</url>
+    
+    <content type="html"><![CDATA[<h2 id="从官网下载最新安装包"><a href="#从官网下载最新安装包" class="headerlink" title="从官网下载最新安装包"></a>从官网下载最新安装包</h2><p>在 git 官网下载安装包并安装。 Git For Windows 最新下载地址。下载下来后，双击开始，然后一直点下一步，完事。</p><h2 id="二、【推荐】通过升级命令一键更新"><a href="#二、【推荐】通过升级命令一键更新" class="headerlink" title="二、【推荐】通过升级命令一键更新"></a>二、【推荐】通过升级命令一键更新</h2><p>按 windows 键+S 键，在弹出的界面输入 Git Bash，然后输入下面的命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git update-git-for-windows<br></code></pre></td></tr></table></figure><p>它就会开始自动下载了：</p><p>​<img src="https://image.loufengkai.top/siyuan/202301152207180.png" alt="">​</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件教程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>由于i++与++i的运算顺序不同而导致的死循环</title>
     <link href="/2023/02/10/%E7%94%B1%E4%BA%8Ei++%E4%B8%8E++i%E7%9A%84%E8%BF%90%E7%AE%97%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%90%8C%E8%80%8C%E5%AF%BC%E8%87%B4%E7%9A%84%E6%AD%BB%E5%BE%AA%E7%8E%AF/"/>
     <url>/2023/02/10/%E7%94%B1%E4%BA%8Ei++%E4%B8%8E++i%E7%9A%84%E8%BF%90%E7%AE%97%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%90%8C%E8%80%8C%E5%AF%BC%E8%87%B4%E7%9A%84%E6%AD%BB%E5%BE%AA%E7%8E%AF/</url>
