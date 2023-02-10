@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>以换行(`\r\n`)拆分字符串</title>
+    <link href="/2023/02/10/%E4%BB%A5%E6%8D%A2%E8%A1%8C%E7%AC%A6%E5%8F%B7%E6%8B%86%E5%88%86%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <url>/2023/02/10/%E4%BB%A5%E6%8D%A2%E8%A1%8C%E7%AC%A6%E5%8F%B7%E6%8B%86%E5%88%86%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    
+    <content type="html"><![CDATA[<h2 id="以换行-r-n-拆分字符串"><a href="#以换行-r-n-拆分字符串" class="headerlink" title="以换行(\r\n)拆分字符串"></a>以换行(<code>\r\n</code>)拆分字符串</h2><hr><h2 id="字符串数组形式："><a href="#字符串数组形式：" class="headerlink" title="字符串数组形式："></a>字符串数组形式：</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs Csharp"><span class="hljs-built_in">string</span>[] striparr = strip.Split(<span class="hljs-keyword">new</span> <span class="hljs-built_in">string</span>[] &#123; <span class="hljs-string">&quot;\r\n&quot;</span> &#125;, StringSplitOptions.None);<br><br>striparr = striparr.Where(s =&gt; !<span class="hljs-built_in">string</span>.IsNullOrEmpty(s)).ToArray();<br></code></pre></td></tr></table></figure><hr><h2 id="List形式："><a href="#List形式：" class="headerlink" title="List形式："></a>List<sting>形式：</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs Csharp">List&lt;<span class="hljs-built_in">string</span>&gt; striparr = strip.Split(<span class="hljs-keyword">new</span> <span class="hljs-built_in">string</span>[] &#123; <span class="hljs-string">&quot;\r\n&quot;</span> &#125;, StringSplitOptions.None).ToList();<br><br>striparr = striparr.Where(s =&gt; !<span class="hljs-built_in">string</span>.IsNullOrEmpty(s)).ToList();<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C#</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
