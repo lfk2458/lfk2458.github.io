@@ -230,6 +230,67 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2023/02/10/%E7%94%B1%E4%BA%8Ei++%E4%B8%8E++i%E7%9A%84%E8%BF%90%E7%AE%97%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%90%8C%E8%80%8C%E5%AF%BC%E8%87%B4%E7%9A%84%E6%AD%BB%E5%BE%AA%E7%8E%AF/" target="_self">
+          由于i++与++i的运算顺序不同而导致的死循环
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/02/10/%E7%94%B1%E4%BA%8Ei++%E4%B8%8E++i%E7%9A%84%E8%BF%90%E7%AE%97%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%90%8C%E8%80%8C%E5%AF%BC%E8%87%B4%E7%9A%84%E6%AD%BB%E5%BE%AA%E7%8E%AF/" target="_self">
+        <div>
+          死循环的原因: i++ 和 ++i 的基本功能是相同的，都是对变量 i 进行自增 1 运算，从功能上讲相当于 i =i+1 ;两个的区别在于： int i=1,a=0;i++ 先运算在赋值,例如 a=i++,先运算 a=i,后运算 i=i+1,所以结果是 a == 1 ；++i 先赋值在运算,例如 a=++i,先运算 i=i+1,后运算 a=i,所以结果是 a == 2 。  1234567891
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-02-10 21:13" pubdate>
+              2023-02-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BC%96%E7%A8%8B/" class="category-chain-item">编程</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/C/">#C#</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2023/02/10/%E4%BD%BF%E7%94%A8SQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/" target="_self">
           使用SQL存储过程完整流程
         </a>
@@ -537,5 +598,20 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

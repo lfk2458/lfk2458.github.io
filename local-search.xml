@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>由于i++与++i的运算顺序不同而导致的死循环</title>
+    <link href="/2023/02/10/%E7%94%B1%E4%BA%8Ei++%E4%B8%8E++i%E7%9A%84%E8%BF%90%E7%AE%97%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%90%8C%E8%80%8C%E5%AF%BC%E8%87%B4%E7%9A%84%E6%AD%BB%E5%BE%AA%E7%8E%AF/"/>
+    <url>/2023/02/10/%E7%94%B1%E4%BA%8Ei++%E4%B8%8E++i%E7%9A%84%E8%BF%90%E7%AE%97%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%90%8C%E8%80%8C%E5%AF%BC%E8%87%B4%E7%9A%84%E6%AD%BB%E5%BE%AA%E7%8E%AF/</url>
+    
+    <content type="html"><![CDATA[<p>死循环的原因: i++ 和 ++i 的基本功能是相同的，都是对变量 i 进行自增 1 运算，从功能上讲相当于 i =i+1 ;<br>两个的区别在于： int i=1,a=0;<br>i++ 先运算在赋值,例如 a=i++,先运算 a=i,后运算 i=i+1,所以结果是 a == 1 ；<br>++i 先赋值在运算,例如 a=++i,先运算 i=i+1,后运算 a=i,所以结果是 a == 2 。</p><hr><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> ResultEntity <span class="hljs-title">SyncDataXml</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> interfaceCode, SyncDataParam param</span>)</span><br>&#123;<br>    <span class="hljs-built_in">int</span> curPage = <span class="hljs-number">1</span>;<br>    <span class="hljs-built_in">int</span> nextPage = <span class="hljs-number">2</span>;<br>    <span class="hljs-built_in">int</span> totalPage = <span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">if</span>(param.Page != <span class="hljs-number">0</span>)<br>     &#123;<br>         curPage = param.Page;<br>         nextPage = curPage++;<span class="hljs-comment">// 死循环的原因</span><br>     &#125;<br>    <span class="hljs-comment">//递归</span><br>    <span class="hljs-keyword">if</span>(nextPage &lt;= totalPage)<br>     &#123;<br>         <span class="hljs-keyword">var</span> nextParam = <span class="hljs-keyword">new</span> SyncDataParam<br>         &#123;<br>             LastUpdateTime = param.LastUpdateTime,<br>             Page = nextPage<br>             &#125;;<br>         result = SyncDataXml(interfaceCode, nextParam);<br>     &#125;<br>    <span class="hljs-keyword">return</span> result;<br>&#125;<br></code></pre></td></tr></table></figure><hr><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> ResultEntity <span class="hljs-title">SyncDataXml</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> interfaceCode, SyncDataParam param</span>)</span><br>&#123;<br>    <span class="hljs-built_in">int</span> curPage = <span class="hljs-number">1</span>;<br>    <span class="hljs-built_in">int</span> nextPage = <span class="hljs-number">2</span>;<br>    <span class="hljs-built_in">int</span> totalPage = <span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">if</span>(param.Page != <span class="hljs-number">0</span>)<br>     &#123;<br>         curPage = param.Page;<br>         nextPage = ++curPage;<span class="hljs-comment">// 解决</span><br>     &#125;<br>    <span class="hljs-comment">//递归</span><br>    <span class="hljs-keyword">if</span>(nextPage &lt;= totalPage)<br>     &#123;<br>         <span class="hljs-keyword">var</span> nextParam = <span class="hljs-keyword">new</span> SyncDataParam<br>         &#123;<br>             LastUpdateTime = param.LastUpdateTime,<br>             Page = nextPage<br>             &#125;;<br>         result = SyncDataXml(interfaceCode, nextParam);<br>     &#125;<br>    <span class="hljs-keyword">return</span> result;<br>&#125;<br></code></pre></td></tr></table></figure><hr>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C#</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>使用SQL存储过程完整流程</title>
     <link href="/2023/02/10/%E4%BD%BF%E7%94%A8SQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/"/>
     <url>/2023/02/10/%E4%BD%BF%E7%94%A8SQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/</url>
