@@ -16,22 +16,22 @@
   <meta name="author" content="医学院の工科狗">
   <meta name="keywords" content="">
   
-    <meta name="description" content="死循环的原因: i++ 和 ++i 的基本功能是相同的，都是对变量 i 进行自增 1 运算，从功能上讲相当于 i &#x3D;i+1 ;两个的区别在于： int i&#x3D;1,a&#x3D;0;i++ 先运算在赋值,例如 a&#x3D;i++,先运算 a&#x3D;i,后运算 i&#x3D;i+1,所以结果是 a &#x3D;&#x3D; 1 ；++i 先赋值在运算,例如 a&#x3D;++i,先运算 i&#x3D;i+1,后运算 a&#x3D;i,所以结果是 a &#x3D;&#x3D; 2 。  1234567891">
+    <meta name="description" content="以换行(\r\n)拆分字符串 字符串数组形式：123string[] striparr &#x3D; strip.Split(new string[] &amp;#123; &quot;\r\n&quot; &amp;#125;, StringSplitOptions.None);striparr &#x3D; striparr.Where(s &#x3D;&gt; !string.IsNullOrEmpty(s)).ToArray();">
 <meta property="og:type" content="article">
-<meta property="og:title" content="由于i++与++i的运算顺序不同而导致的死循环">
-<meta property="og:url" content="https://www.fengkai.online/2023/02/10/%E7%94%B1%E4%BA%8Ei++%E4%B8%8E++i%E7%9A%84%E8%BF%90%E7%AE%97%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%90%8C%E8%80%8C%E5%AF%BC%E8%87%B4%E7%9A%84%E6%AD%BB%E5%BE%AA%E7%8E%AF/index.html">
+<meta property="og:title" content="以换行(&#96;\r\n&#96;)拆分字符串">
+<meta property="og:url" content="https://www.fengkai.online/%E7%BC%96%E7%A8%8B/%E4%BB%A5%E6%8D%A2%E8%A1%8C%E7%AC%A6%E5%8F%B7%E6%8B%86%E5%88%86%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
 <meta property="og:site_name" content="医学院の工科狗的博客">
-<meta property="og:description" content="死循环的原因: i++ 和 ++i 的基本功能是相同的，都是对变量 i 进行自增 1 运算，从功能上讲相当于 i &#x3D;i+1 ;两个的区别在于： int i&#x3D;1,a&#x3D;0;i++ 先运算在赋值,例如 a&#x3D;i++,先运算 a&#x3D;i,后运算 i&#x3D;i+1,所以结果是 a &#x3D;&#x3D; 1 ；++i 先赋值在运算,例如 a&#x3D;++i,先运算 i&#x3D;i+1,后运算 a&#x3D;i,所以结果是 a &#x3D;&#x3D; 2 。  1234567891">
+<meta property="og:description" content="以换行(\r\n)拆分字符串 字符串数组形式：123string[] striparr &#x3D; strip.Split(new string[] &amp;#123; &quot;\r\n&quot; &amp;#125;, StringSplitOptions.None);striparr &#x3D; striparr.Where(s &#x3D;&gt; !string.IsNullOrEmpty(s)).ToArray();">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-10T13:13:40.000Z">
-<meta property="article:modified_time" content="2023-02-10T13:13:51.647Z">
+<meta property="article:published_time" content="2023-02-10T12:16:43.000Z">
+<meta property="article:modified_time" content="2023-02-10T12:18:29.841Z">
 <meta property="article:author" content="医学院の工科狗">
 <meta property="article:tag" content="C#">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>由于i++与++i的运算顺序不同而导致的死循环 - 医学院の工科狗的博客</title>
+  <title>以换行(`\r\n`)拆分字符串 - 医学院の工科狗的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="由于i++与++i的运算顺序不同而导致的死循环"></span>
+            <span id="subtitle" data-typed-text="以换行(`\r\n`)拆分字符串"></span>
           
         </div>
 
@@ -217,7 +217,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-10 21:13" pubdate>
+        <time datetime="2023-02-10 20:16" pubdate>
           2023年2月10日 晚上
         </time>
       </span>
@@ -229,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          373 字
         
       </span>
     
@@ -240,7 +240,7 @@
         
         
         
-          6 分钟
+          2 分钟
         
       </span>
     
@@ -282,18 +282,15 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">由于i++与++i的运算顺序不同而导致的死循环</h1>
+            <h1 style="display: none">以换行(`\r\n`)拆分字符串</h1>
             
             
               <div class="markdown-body">
                 
-                <p>死循环的原因: i++ 和 ++i 的基本功能是相同的，都是对变量 i 进行自增 1 运算，从功能上讲相当于 i =i+1 ;<br>两个的区别在于： int i=1,a=0;<br>i++ 先运算在赋值,例如 a=i++,先运算 a=i,后运算 i=i+1,所以结果是 a == 1 ；<br>++i 先赋值在运算,例如 a=++i,先运算 i=i+1,后运算 a=i,所以结果是 a == 2 。</p>
+                <h2 id="以换行-r-n-拆分字符串"><a href="#以换行-r-n-拆分字符串" class="headerlink" title="以换行(\r\n)拆分字符串"></a>以换行(<code>\r\n</code>)拆分字符串</h2><hr>
+<h2 id="字符串数组形式："><a href="#字符串数组形式：" class="headerlink" title="字符串数组形式："></a>字符串数组形式：</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs Csharp"><span class="hljs-built_in">string</span>[] striparr = strip.Split(<span class="hljs-keyword">new</span> <span class="hljs-built_in">string</span>[] &#123; <span class="hljs-string">&quot;\r\n&quot;</span> &#125;, StringSplitOptions.None);<br><br>striparr = striparr.Where(s =&gt; !<span class="hljs-built_in">string</span>.IsNullOrEmpty(s)).ToArray();<br></code></pre></td></tr></table></figure>
 <hr>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> ResultEntity <span class="hljs-title">SyncDataXml</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> interfaceCode, SyncDataParam param</span>)</span><br>&#123;<br>    <span class="hljs-built_in">int</span> curPage = <span class="hljs-number">1</span>;<br>    <span class="hljs-built_in">int</span> nextPage = <span class="hljs-number">2</span>;<br>    <span class="hljs-built_in">int</span> totalPage = <span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">if</span>(param.Page != <span class="hljs-number">0</span>)<br>     &#123;<br>         curPage = param.Page;<br>         nextPage = curPage++;<span class="hljs-comment">// 死循环的原因</span><br>     &#125;<br>    <span class="hljs-comment">//递归</span><br>    <span class="hljs-keyword">if</span>(nextPage &lt;= totalPage)<br>     &#123;<br>         <span class="hljs-keyword">var</span> nextParam = <span class="hljs-keyword">new</span> SyncDataParam<br>         &#123;<br>             LastUpdateTime = param.LastUpdateTime,<br>             Page = nextPage<br>             &#125;;<br>         result = SyncDataXml(interfaceCode, nextParam);<br>     &#125;<br>    <span class="hljs-keyword">return</span> result;<br>&#125;<br></code></pre></td></tr></table></figure>
-<hr>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> ResultEntity <span class="hljs-title">SyncDataXml</span>(<span class="hljs-params"><span class="hljs-built_in">string</span> interfaceCode, SyncDataParam param</span>)</span><br>&#123;<br>    <span class="hljs-built_in">int</span> curPage = <span class="hljs-number">1</span>;<br>    <span class="hljs-built_in">int</span> nextPage = <span class="hljs-number">2</span>;<br>    <span class="hljs-built_in">int</span> totalPage = <span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">if</span>(param.Page != <span class="hljs-number">0</span>)<br>     &#123;<br>         curPage = param.Page;<br>         nextPage = ++curPage;<span class="hljs-comment">// 解决</span><br>     &#125;<br>    <span class="hljs-comment">//递归</span><br>    <span class="hljs-keyword">if</span>(nextPage &lt;= totalPage)<br>     &#123;<br>         <span class="hljs-keyword">var</span> nextParam = <span class="hljs-keyword">new</span> SyncDataParam<br>         &#123;<br>             LastUpdateTime = param.LastUpdateTime,<br>             Page = nextPage<br>             &#125;;<br>         result = SyncDataXml(interfaceCode, nextParam);<br>     &#125;<br>    <span class="hljs-keyword">return</span> result;<br>&#125;<br></code></pre></td></tr></table></figure>
-<hr>
-
+<h2 id="List形式："><a href="#List形式：" class="headerlink" title="List形式："></a>List<sting>形式：</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs Csharp">List&lt;<span class="hljs-built_in">string</span>&gt; striparr = strip.Split(<span class="hljs-keyword">new</span> <span class="hljs-built_in">string</span>[] &#123; <span class="hljs-string">&quot;\r\n&quot;</span> &#125;, StringSplitOptions.None).ToList();<br><br>striparr = striparr.Where(s =&gt; !<span class="hljs-built_in">string</span>.IsNullOrEmpty(s)).ToList();<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -338,8 +335,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>由于i++与++i的运算顺序不同而导致的死循环</div>
-      <div>https://www.fengkai.online/2023/02/10/由于i++与++i的运算顺序不同而导致的死循环/</div>
+      <div>以换行(`\r\n`)拆分字符串</div>
+      <div>https://www.fengkai.online/编程/以换行符号拆分字符串/</div>
     </div>
     <div class="license-meta">
       
@@ -383,21 +380,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/11/Git%E5%8D%87%E7%BA%A7%E7%89%88%E6%9C%AC%EF%BC%88windows%EF%BC%89/" title="Git升级版本（windows）">
+                      <a href="/%E7%BC%96%E7%A8%8B/SQL%E4%B8%A4%E8%A1%A8%E4%B9%8B%E9%97%B4%EF%BC%9A%E6%A0%B9%E6%8D%AE%E4%B8%80%E4%B8%AA%E8%A1%A8%E7%9A%84%E5%AD%97%E6%AE%B5%E6%9B%B4%E6%96%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%A1%A8%E7%9A%84%E5%AD%97%E6%AE%B5/" title="SQL两表之间：根据一个表的字段更新另一个表的字段">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Git升级版本（windows）</span>
+                        <span class="hidden-mobile">SQL两表之间：根据一个表的字段更新另一个表的字段</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2023/02/10/%E4%BD%BF%E7%94%A8SQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/" title="使用SQL存储过程完整流程">
-                        <span class="hidden-mobile">使用SQL存储过程完整流程</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
@@ -672,5 +663,20 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
