@@ -16,24 +16,22 @@
   <meta name="author" content="医学院の工科狗">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一、从官网下载最新安装包在 git 官网下载安装包并安装。 Git For Windows 最新下载地址。下载下来后，双击开始，然后一直点下一步，完事。 二、【推荐】通过升级命令一键更新按 windows 键+S 键，在弹出的界面输入 Git Bash，然后输入下面的命令 1git update-git-for-windows 它就会开始自动下载了： ​​">
+    <meta name="description" content="新建存储过程  12345678910111213USE [数据库名]GOcreate proc myinsert -- 创建一个存储过程，名称为myinsert    @username varchar(10),--注意这里的逗号，多个参数用逗号隔开    @password varchar(10),    @name varchar(10),    @usertype varchar(10)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git升级版本（windows）">
-<meta property="og:url" content="https://www.fengkai.online/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/Git%E5%8D%87%E7%BA%A7%E7%89%88%E6%9C%AC%EF%BC%88windows%EF%BC%89/index.html">
+<meta property="og:title" content="使用SQL存储过程完整流程">
+<meta property="og:url" content="https://www.fengkai.online/%E4%BD%BF%E7%94%A8SQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B.html">
 <meta property="og:site_name" content="医学院の工科狗的博客">
-<meta property="og:description" content="一、从官网下载最新安装包在 git 官网下载安装包并安装。 Git For Windows 最新下载地址。下载下来后，双击开始，然后一直点下一步，完事。 二、【推荐】通过升级命令一键更新按 windows 键+S 键，在弹出的界面输入 Git Bash，然后输入下面的命令 1git update-git-for-windows 它就会开始自动下载了： ​​">
+<meta property="og:description" content="新建存储过程  12345678910111213USE [数据库名]GOcreate proc myinsert -- 创建一个存储过程，名称为myinsert    @username varchar(10),--注意这里的逗号，多个参数用逗号隔开    @password varchar(10),    @name varchar(10),    @usertype varchar(10)">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://image.loufengkai.top/siyuan/202301152207180.png">
-<meta property="article:published_time" content="2023-02-10T17:32:21.000Z">
-<meta property="article:modified_time" content="2023-02-11T03:28:11.734Z">
+<meta property="article:published_time" content="2023-02-10T12:58:41.000Z">
+<meta property="article:modified_time" content="2023-02-10T12:58:56.568Z">
 <meta property="article:author" content="医学院の工科狗">
-<meta property="article:tag" content="Git">
+<meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://image.loufengkai.top/siyuan/202301152207180.png">
   
   
   
-  <title>Git升级版本（windows） - 医学院の工科狗的博客</title>
+  <title>使用SQL存储过程完整流程 - 医学院の工科狗的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Git升级版本（windows）"></span>
+            <span id="subtitle" data-typed-text="使用SQL存储过程完整流程"></span>
           
         </div>
 
@@ -219,8 +217,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-11 01:32" pubdate>
-          2023年2月11日 凌晨
+        <time datetime="2023-02-10 20:58" pubdate>
+          2023年2月10日 晚上
         </time>
       </span>
     
@@ -231,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          163 字
+          1.1k 字
         
       </span>
     
@@ -242,7 +240,7 @@
         
         
         
-          1 分钟
+          6 分钟
         
       </span>
     
@@ -284,16 +282,19 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Git升级版本（windows）</h1>
+            <h1 style="display: none">使用SQL存储过程完整流程</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="一、从官网下载最新安装包"><a href="#一、从官网下载最新安装包" class="headerlink" title="一、从官网下载最新安装包"></a>一、从官网下载最新安装包</h2><p>在 git 官网下载安装包并安装。 Git For Windows 最新下载地址。下载下来后，双击开始，然后一直点下一步，完事。</p>
-<h2 id="二、【推荐】通过升级命令一键更新"><a href="#二、【推荐】通过升级命令一键更新" class="headerlink" title="二、【推荐】通过升级命令一键更新"></a>二、【推荐】通过升级命令一键更新</h2><p>按 windows 键+S 键，在弹出的界面输入 Git Bash，然后输入下面的命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git update-git-for-windows<br></code></pre></td></tr></table></figure>
-<p>它就会开始自动下载了：</p>
-<p>​<img src="https://image.loufengkai.top/siyuan/202301152207180.png" srcset="/img/loading.gif" lazyload alt="">​</p>
+                <ul>
+<li>新建存储过程</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs sql">USE [数据库名]<br>GO<br><span class="hljs-keyword">create</span> proc myinsert <span class="hljs-comment">-- 创建一个存储过程，名称为myinsert</span><br>    <span class="hljs-variable">@username</span> <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>),<span class="hljs-comment">--注意这里的逗号，多个参数用逗号隔开</span><br>    <span class="hljs-variable">@password</span> <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>),<br>    <span class="hljs-variable">@name</span> <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>),<br>    <span class="hljs-variable">@usertype</span> <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>),<br>    <span class="hljs-variable">@createpeople</span> <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>)<span class="hljs-comment">--这里写参数，如果有的话；没有的话就空着</span><br>    <span class="hljs-keyword">as</span><br>    <span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> SystemUsers(UserName,PassWord,Name,UserType,CreatPeople)<br>    <span class="hljs-keyword">values</span>(<span class="hljs-variable">@username</span>,<span class="hljs-variable">@password</span>,<span class="hljs-variable">@name</span>,<span class="hljs-variable">@usertype</span>,<span class="hljs-variable">@createpeople</span>)<br>    <span class="hljs-comment">--这里写具体语句，可以写N个</span><br>    go<span class="hljs-comment">--可加可不加，go的意思是另起一页，相当于下一个功能块。如果下边不写语句，可以不加！</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>C# 调用存储过程</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-built_in">string</span> strsql = <span class="hljs-string">&quot;Data Source=localhost;Initial Catalog=######;Integrated Security=True&quot;</span>;<span class="hljs-comment">//数据库链接字符串</span><br><span class="hljs-built_in">string</span> sql = <span class="hljs-string">&quot;SelectUserName&quot;</span>;<span class="hljs-comment">//要调用的存储过程名</span><br>SqlConnection conStr = <span class="hljs-keyword">new</span> SqlConnection(strsql);<span class="hljs-comment">//SQL数据库连接对象，以数据库链接字符串为参数</span><br>SqlCommand comStr = <span class="hljs-keyword">new</span> SqlCommand(sql, conStr);<span class="hljs-comment">//SQL语句执行对象，第一个参数是要执行的语句，第二个是数据库连接对象</span><br>comStr.CommandType = CommandType.StoredProcedure;<span class="hljs-comment">//因为要使用的是存储过程，所以设置执行类型为存储过程</span><br><span class="hljs-comment">//依次设定存储过程的参数</span><br>comStr.Parameters.Add(<span class="hljs-string">&quot;@Param1&quot;</span>, SqlDbType.Text).Value = <span class="hljs-string">&quot;####&quot;</span>;<br>conStr.Open();<span class="hljs-comment">//打开数据库连接</span><br><span class="hljs-comment">//执行存储过程</span><br>SqlDataAdapter SqlDataAdapter1 = <span class="hljs-keyword">new</span> SqlDataAdapter(comStr);<br>DataTable DT=<span class="hljs-keyword">new</span> DataTable ();<br>SqlDataAdapter1.Fill(DT);<br>dataGridView1.DataSource = DT;<br>conStr.Close();<span class="hljs-comment">//关闭连接</span><br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -312,7 +313,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/" class="category-chain-item">软件教程</a>
+  <a href="/categories/%E7%BC%96%E7%A8%8B/" class="category-chain-item">编程</a>
   
   
 
@@ -327,7 +328,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Git/">#Git</a>
+        <a href="/tags/SQL/">#SQL</a>
       
     </div>
   
@@ -339,8 +340,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Git升级版本（windows）</div>
-      <div>https://www.fengkai.online/软件教程/Git升级版本（windows）/</div>
+      <div>使用SQL存储过程完整流程</div>
+      <div>https://www.fengkai.online/使用SQL存储过程完整流程.html</div>
     </div>
     <div class="license-meta">
       
@@ -352,7 +353,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年2月11日</div>
+          <div>2023年2月10日</div>
         </div>
       
       
@@ -384,12 +385,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/%E7%94%B1%E4%BA%8Ei++%E4%B8%8E++i%E7%9A%84%E8%BF%90%E7%AE%97%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%90%8C%E8%80%8C%E5%AF%BC%E8%87%B4%E7%9A%84%E6%AD%BB%E5%BE%AA%E7%8E%AF.html" title="由于i++与++i的运算顺序不同而导致的死循环">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">由于i++与++i的运算顺序不同而导致的死循环</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/%E7%BC%96%E7%A8%8B/%E7%94%B1%E4%BA%8Ei++%E4%B8%8E++i%E7%9A%84%E8%BF%90%E7%AE%97%E9%A1%BA%E5%BA%8F%E4%B8%8D%E5%90%8C%E8%80%8C%E5%AF%BC%E8%87%B4%E7%9A%84%E6%AD%BB%E5%BE%AA%E7%8E%AF/" title="由于i++与++i的运算顺序不同而导致的死循环">
-                        <span class="hidden-mobile">由于i++与++i的运算顺序不同而导致的死循环</span>
+                      <a href="/SQL%E4%B8%A4%E8%A1%A8%E4%B9%8B%E9%97%B4%EF%BC%9A%E6%A0%B9%E6%8D%AE%E4%B8%80%E4%B8%AA%E8%A1%A8%E7%9A%84%E5%AD%97%E6%AE%B5%E6%9B%B4%E6%96%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%A1%A8%E7%9A%84%E5%AD%97%E6%AE%B5.html" title="SQL两表之间：根据一个表的字段更新另一个表的字段">
+                        <span class="hidden-mobile">SQL两表之间：根据一个表的字段更新另一个表的字段</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -667,20 +674,5 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
